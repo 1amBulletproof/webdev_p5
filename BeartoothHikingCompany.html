@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Beartooth Hiking Company (BHC)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/BeartoothHikingCompany.css" type="text/css" />
+  </head>
+
+  <body>
+      <div id="page_wrapper">
+
+        <header>
+        <h1 id="top_header">Beartooth Hiking Company</h1>
+        <p id="slogan">Alaska's Lamest Hiking Company</p>
+        <nav>
+      </header>
+
+<!-- form types: text fields, text areas, buttons, checkboxes, password, file, radio, submit, text -->
+      <section id="main_info">
+        <form action="http://localhost:80/TestProgram" method=GET>
+          <center>
+            First name:
+            <input type="TEXT" name="firstName" value="Bob">
+            <br/>
+            Last name:
+            <input type="TEXT" name="lastName" value="EVANS">
+            <br/>
+            <input type="SUBMIT">
+          </center>
+        </form>
+
+      <table id="tours_table">
+        <thead>
+            <tr>
+              <th id="table_title" colspan="5">Tour Options</th>
+            </tr>
+            <tr>
+              <th>Tour</th>
+              <th>Duration (days)</th>
+              <th>Difficulty</th>
+              <th>Cost (USD/day)<sup>*</sup></th>
+            </tr>
+            </thead>
+      <tbody>
+        <tr>
+            <td>Gardiner Lake</td>
+            <td>3, 5</td>
+            <td>intermediate</td>
+            <td>$40</td>
+        </tr>
+        <tr>
+            <td>Hellroaring Plateau</td>
+            <td>2, 3, 4</td>
+            <td>easy</td>
+            <td>$35</td>
+        </tr>
+        <tr>
+            <td>The Beaten Path</td>
+            <td>5, 7</td>
+            <td>difficult</td>
+            <td>$45</td>
+        </tr>
+
+      </tbody>
+     </table>
+      <p class="hidden_msg"><sup>*</sup>50% surcharge for sat/sun hikes</p>
+      <p class="hidden_msg"><sup>**</sup>These are stock images. Your hiking environment may or may not <a href="https://ak2.picdn.net/shutterstock/videos/17416729/thumb/1.jpg">be different</a></p>
+      <br>
+    </section>
+
+      <section id="more_info">
+        <h2 id="more_info_header" class="more_info">More Information</h2>
+        <p>For more information, checkout the <a href="http://www.wilderness.net/index.cfm?fuse=NWPS&sec=wildView&WID=1"><span id=wilderness_link>wilderness website</span></a></p>
+      </section>
+
+      <footer>
+        <p>Contact: <a href="mailto:brandon.tarney@gmail.com">Brandon Tarney</a></p>
+      </footer>
+
+    </div>
+
+  <!-- Script for browser-sync ...doesn't seem to work tho -->
+    <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.12'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+  </body>
+
+</html>
