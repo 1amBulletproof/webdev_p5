@@ -16,19 +16,81 @@
         <nav>
       </header>
 
+      <section id="form" class="table">
+        <h2 id="form_header">Choose Your Hike</h2>
+        <form action="http://localhost:80/TestProgram" method=GET>
+          <p class="excited_msg">Hike</p>
+          <select class="bigger_text" name="hike" size="1">
+            <option value="hellroaring">Hellroaring Plateau</option>
+            <option value="gardiner">Gardiner Lake</option>
+            <option value="beaten">Beaten Path</option>
+          </select>
+          <p class="excited_msg">Date</p>
+          <select class="bigger_text" name="year" size="1">
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+          </select>
+          <select class="bigger_text" name="month" size="1">
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+          </select>
+          <select class="bigger_text" name="day" size="1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <p class="excited_msg">Duration (days)</p>
+          <select class="bigger_text" name="duration">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+          </select>
+          <br/><br/>
+          <input class="bigger_text" type="SUBMIT" name="submit" value="send data"/>
+          <br/>
+          <p class="excited_msg">Total Cost:
+            <input class="bigger_text" type="text" name="zip" size="15" maxlength="15" value="$0.00 ($USD)"/>
+          </p>
+         </form>
+
+      </section>
+
 <!-- form types: text fields, text areas, buttons, checkboxes, password, file, radio, submit, text -->
       <section id="main_info">
-        <form action="http://localhost:80/TestProgram" method=GET>
-          <center>
-            First name:
-            <input type="TEXT" name="firstName" value="Bob">
-            <br/>
-            Last name:
-            <input type="TEXT" name="lastName" value="EVANS">
-            <br/>
-            <input type="SUBMIT">
-          </center>
-        </form>
 
       <table id="tours_table">
         <thead>
@@ -39,7 +101,6 @@
               <th>Tour</th>
               <th>Duration (days)</th>
               <th>Difficulty</th>
-              <th>Cost (USD/day)<sup>*</sup></th>
             </tr>
             </thead>
       <tbody>
@@ -47,27 +108,24 @@
             <td>Gardiner Lake</td>
             <td>3, 5</td>
             <td>intermediate</td>
-            <td>$40</td>
         </tr>
         <tr>
             <td>Hellroaring Plateau</td>
             <td>2, 3, 4</td>
             <td>easy</td>
-            <td>$35</td>
         </tr>
         <tr>
             <td>The Beaten Path</td>
             <td>5, 7</td>
             <td>difficult</td>
-            <td>$45</td>
         </tr>
 
       </tbody>
      </table>
-      <p class="hidden_msg"><sup>*</sup>50% surcharge for sat/sun hikes</p>
-      <p class="hidden_msg"><sup>**</sup>These are stock images. Your hiking environment may or may not <a href="https://ak2.picdn.net/shutterstock/videos/17416729/thumb/1.jpg">be different</a></p>
-      <br>
     </section>
+
+
+
 
       <section id="more_info">
         <h2 id="more_info_header" class="more_info">More Information</h2>
