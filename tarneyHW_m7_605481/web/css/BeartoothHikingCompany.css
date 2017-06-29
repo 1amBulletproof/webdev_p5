@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS DOCUMENT */
+body {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffe8be), to(#fbf7ed));
+  color: rgb( 133, 91, 37);
+  margin: 0;
+  cursor: wait;
+
+}
+header {
+  background-image: url("images/Camping02.gif");
+  top: 0;
+  width: 100%;
+}
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  list-style: inside;
+  list-style-type: none;
+  border-bottom-width: 2px;
+  border-bottom-style: ridge;
+  padding-top: 5px;
+  text-align: center;
+}
+ul, ol{
+  margin: 10;
+  padding: 0;
+}
+li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 3px;
+}
+footer {
+  padding-top: 50px;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  border: 2px solid black;
+}
+th,td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+a {
+  color: rgb(52, 69, 113);
+}
+a:hover {
+  background-color: #dfae4e;
+}
+.bigger_text {
+  font-size: x-large;
+}
+.hiking_tours_list {
+  display: block;
+  font-size: x-large;
+}
+.excited_msg {
+    font-style: bold;
+    font-size: x-large;
+}
+.hidden_msg {
+    font-size: x-small;
+}
+th#table_title {
+  font-size: large;
+}
+table#tours_table {
+  margin-bottom: 5px;
+}
+#form {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#form_header {
+  text-decoration: underline
+}
+#wilderness_link {
+  font-size: large;
+  font-style: italic;
+}
+#tour_options {
+  width: 600;
+}
+#top_pic, .table_pic {
+  width: 200px;
+  height: 100px;
+  align-self: stretch;
+}
+#slogan {
+    font-style: italic;
+}
+#hiking_tours_header {
+  text-decoration: underline;
+}
