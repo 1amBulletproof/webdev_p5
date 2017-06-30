@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,18 +32,45 @@ public class TarneyServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<link rel=\"stylesheet\" href=\"css/BeartoothHikingCompany.css\" type=\"text/css\" />");
             out.println("<head>");
-            out.println("<title>Servlet TarneyServlet</title>");            
+            out.println("<title>Servlet TarneyServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet TarneyServlet at " + request.getContextPath() + "</h1>");
+            out.println("<b>Request Method:</b> " + request.getMethod() + "<br>");
+            out.println("<b>Request URI:</b> " + request.getRequestURI() + "<br>");
+            out.println("<b>Request Protocol:</b>" + request.getProtocol() + "<br>");
+            Enumeration headerNames = request.getHeaderNames();
+            while (headerNames.hasMoreElements()) {
+                String headerName = (String) headerNames.nextElement();
+                out.println("<p>" + headerName + " -- " + request.getHeader(headerName) + "</p>");
+            }
+
+            String queryString = request.getQueryString();
+            String[] queryValues = queryString.split("&");
+            //@TODO: Parse the string with HikeQueryParser (i.e. parser.getHike(querString))
+
+            //@TODO: Get the rate with Controller (i.e. Conroller.computeRate)
+            //@TODO: Display a page based on computeRate result..
+            int i = 0;
+            while (i < queryValues.length) {
+                out.println("<p>" + queryValues[i] + "</p>");
+                i++;
+            }
+
             out.println("</body>");
             out.println("</html>");
+
+            System.out.println(request.getQueryString());
+            System.out.println("WOAH");
+            System.out.println("WOAH");
+            System.out.println("WOAH");
         }
     }
 
