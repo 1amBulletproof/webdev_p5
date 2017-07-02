@@ -61,7 +61,7 @@ public class HikeQueryParser {
     }
 
     public static int getMonth(String queryString) throws BadQueryStringException {
-        int queryStringOrder = 1;
+        int queryStringOrder = 2;
         int hikeMonth;
 
         String[] queryValues = queryString.split("&");
@@ -82,7 +82,7 @@ public class HikeQueryParser {
     }
 
     public static int getDay(String queryString) throws BadQueryStringException {
-        int queryStringOrder = 1;
+        int queryStringOrder = 3;
         int hikeDay;
 
         String[] queryValues = queryString.split("&");
@@ -103,7 +103,7 @@ public class HikeQueryParser {
     }
     
         public static int getDuration(String queryString) throws BadQueryStringException {
-        int queryStringOrder = 1;
+        int queryStringOrder = 4;
         int hikeDuration;
 
         String[] queryValues = queryString.split("&");
