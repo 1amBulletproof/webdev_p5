@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * TarneyServlet Class
+ * - Serves up HTML pages for Beartooth hiking company
+ * @author Brandon Tarney
+ * @since 6/31/2017
  */
 
 import com.brandontarney.bookingrate.Rates.HIKE;
@@ -17,10 +18,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Tarney
- */
 @WebServlet(name = "TarneyServlet", urlPatterns = {"/TarneyServlet"})
 public class TarneyServlet extends HttpServlet {
 
@@ -36,7 +33,6 @@ public class TarneyServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        //@TODO: Parse the string with HikeQueryParser (i.e. parser.getHike(querString))
         String queryString = request.getQueryString();
         try {
             HIKE hike = HikeQueryParser.getHike(queryString);
@@ -50,10 +46,14 @@ public class TarneyServlet extends HttpServlet {
         } catch (BadQueryStringException | BadRateException exception) {
             createUserErrorPage(response, exception.getMessage());
         }
-        //@TODO: Get the rate with Controller (i.e. Conroller.computeRate)
-        //@TODO: Display a page based on computeRate result..
     }
 
+    /**
+     * createUserErrorPage
+     * @param response  response sent to client
+     * @param errorMsg  message to display at the top of HTML page 
+     * @throws IOException 
+     */
     private void createUserErrorPage(HttpServletResponse response, String errorMsg)
             throws IOException {
         try (PrintWriter out = response.getWriter()) {
@@ -164,14 +164,14 @@ public class TarneyServlet extends HttpServlet {
             out.println("</thead>");
             out.println("<tbody>");
             out.println("<tr>");
-            out.println("<td>Gardiner Lake</td>");
-            out.println("<td>3, 5</td>");
-            out.println("<td>intermediate</td>");
-            out.println("</tr>");
-            out.println("<tr>");
             out.println("<td>Hellroaring Plateau</td>");
             out.println("<td>2, 3, 4</td>");
             out.println("<td>easy</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<td>Gardiner Lake</td>");
+            out.println("<td>3, 5</td>");
+            out.println("<td>intermediate</td>");
             out.println("</tr>");
             out.println("<tr>");
             out.println("<td>The Beaten Path</td>");
@@ -194,12 +194,17 @@ public class TarneyServlet extends HttpServlet {
         }
     }
 
- 
+    /**
+     * createHikeRatePage
+     * @param response  response sent to client
+     * @param rate      rate to display on HTML page
+     * @throws IOException 
+     */
     private void createHikeRatePage(HttpServletResponse response, String rate)
             throws IOException {
 
         try (PrintWriter out = response.getWriter()) {
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
 
@@ -298,7 +303,7 @@ public class TarneyServlet extends HttpServlet {
             out.println("</tr>");
             out.println("<tr>");
             out.println("<th>Tour</th>");
-            out.println("<th>Duration (days, see below)</th>");
+            out.println("<th>Duration (days)</th>");
             out.println("<th>Difficulty</th>");
             out.println("</tr>");
             out.println("</thead>");

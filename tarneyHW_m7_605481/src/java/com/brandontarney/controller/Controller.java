@@ -90,12 +90,26 @@ public class Controller {
         return returnRateAndDescription;
     }
 
+    /** 
+     * parseServerString - split it on the colons
+     * @param serverInfo    colon-separate string
+     * @return  String array
+     */
     public static String[] parseServerString(String serverInfo) {
         String[] returnVal;
         returnVal = serverInfo.split(":");
         return returnVal;
     }
 
+    /**
+     * getHikeDetails - create hike summary string
+     * @param hike
+     * @param duration
+     * @param year
+     * @param month
+     * @param day
+     * @return 
+     */
     public static String getHikeDetails(
             Rates.HIKE hike, int duration, int year, int month, int day) {
         StringBuilder summary = new StringBuilder();
