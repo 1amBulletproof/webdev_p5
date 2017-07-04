@@ -80,7 +80,8 @@ public class TarneyServlet extends HttpServlet {
             out.println("<h2>ERROR</h2>");
             out.println("<p class=\"excited_msg\">" + errorMsg + "</p>");
             out.println("<h2 id=\"form_header\">Choose Your Hike</h2>");
-            out.println("<form action=\"http://localhost:8084/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
+            // This is the local port out.println("<form action=\"http://localhost:8084/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
+            out.println("<form action=\"http://web6.jhuep.com:80/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
             out.println("<p class=\"excited_msg\">Hike</p>");
             out.println("<select class=\"bigger_text\" name=\"hike\" size=\"1\">");
             out.println("<option value=\"hellroaring\">Hellroaring Plateau</option>");
@@ -225,7 +226,8 @@ public class TarneyServlet extends HttpServlet {
 
             out.println("<section id=\"form\" class=\"table\">");
             out.println("<h2 id=\"form_header\">Choose Your Hike</h2>");
-            out.println("<form action=\"http://localhost:8084/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
+            // This is the local port out.println("<form action=\"http://localhost:8084/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
+            out.println("<form action=\"http://web6.jhuep.com:80/tarneyHW_m7_605481/TarneyServlet\" method=GET>");
             out.println("<p class=\"excited_msg\">Hike</p>");
             out.println("<select class=\"bigger_text\" name=\"hike\" size=\"1\">");
             out.println("<option value=\"hellroaring\">Hellroaring Plateau</option>");
